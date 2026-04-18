@@ -21,7 +21,7 @@ DerivedData
 *.ipa
 *.xcuserstate
 **/.xcode.env.local
-
+/Stitch_Screens
 # Android/IntelliJ
 #
 build/
