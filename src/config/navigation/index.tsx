@@ -21,7 +21,7 @@ const MainNavigation = () => {
   //   // Detect auth state change
   //   if (prevAuthRef.current !== isAuth) {
   //     setIsTransitioning(true);
-      
+
   //     // Allow time for current navigation to unmount cleanly
   //     const transitionTimer = setTimeout(() => {
   //       setIsTransitioning(false);
@@ -42,7 +42,7 @@ const MainNavigation = () => {
 
   return (
     <NavigationContainer>
-        <UserNavigation />
+      <UserNavigation />
       {/* {isAuth ? (
         isAdmin === 'admin' ? (
           <AdminNavigation />
