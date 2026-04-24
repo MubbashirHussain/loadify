@@ -13,7 +13,7 @@ import ProfileIcon from '../../assets/icons/profileIcon.png';
 import ProfileIconFilled from '../../assets/icons/profileIconFilled.png';
 import theme from '../../config/theme';
 import { useAuthStore } from '../../store/auth';
-import { helpIcon } from '../../assets/icons';
+import { helpIcon } from '../../assets/generate-icons';
 
 const UserTabs = [
   {
@@ -66,25 +66,25 @@ const AdminTabs = [
     label: 'Volunteers',
     icon: DuoIcon,
     iconActive: DuoIconFilled,
-    },
-    {
-      name: 'HelpRequest',
-      label: 'Requests',
-      icon: HeartIcon,
-      iconActive: HeartIconFilled,
-    },
-    {
-      name: 'DonationList',
-      label: 'Donations',
-      icon: HeartIcon,
-      iconActive: HeartIconFilled,
-    },
-    {
-      name: 'Profile',
-      label: 'Profile',
-      icon: ProfileIcon,
-      iconActive: ProfileIconFilled,
-    },
+  },
+  {
+    name: 'HelpRequest',
+    label: 'Requests',
+    icon: HeartIcon,
+    iconActive: HeartIconFilled,
+  },
+  {
+    name: 'DonationList',
+    label: 'Donations',
+    icon: HeartIcon,
+    iconActive: HeartIconFilled,
+  },
+  {
+    name: 'Profile',
+    label: 'Profile',
+    icon: ProfileIcon,
+    iconActive: ProfileIconFilled,
+  },
 ];
 
 const BottomNavBar: React.FC<BottomTabBarProps> = ({
@@ -118,9 +118,7 @@ const BottomNavBar: React.FC<BottomTabBarProps> = ({
             accessibilityLabel={
               descriptors[route.key]?.options.tabBarAccessibilityLabel
             }
-            testID={
-              descriptors[route.key]?.options.tabBarButtonTestID
-            }
+            testID={descriptors[route.key]?.options.tabBarButtonTestID}
             onPress={onPress}
             style={styles.tab}
             activeOpacity={0.7}

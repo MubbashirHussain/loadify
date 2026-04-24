@@ -11,17 +11,18 @@ import {
   ImageStyle,
 } from 'react-native';
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
-import HomeIcon from '../../assets/icons/homeIcon.png';
-import HomeIconFilled from '../../assets/icons/homeIconFilled.png';
-import DuoIcon from '../../assets/icons/duoIcon.png';
-import DuoIconFilled from '../../assets/icons/duoIconFilled.png';
-import HeartIcon from '../../assets/icons/heartIcon.png';
-import HeartIconFilled from '../../assets/icons/heartIconFilled.png';
-import ProfileIcon from '../../assets/icons/profileIcon.png';
-import ProfileIconFilled from '../../assets/icons/profileIconFilled.png';
 import theme from '../../config/theme';
-// import { useAuthStore } from '../../store/auth';
-import { helpIcon } from '../../assets/icons';
+import {
+  dashboardIcon,
+  dashboardIconFill,
+  diaryIcon,
+  diaryIconFill,
+  tripIcon,
+  tripIconFill,
+  profileIcon,
+  profileIconFill,
+  truckIcon,
+} from '../../assets/icons';
 
 interface BottomTab {
   name: string;
@@ -36,34 +37,34 @@ interface BottomTab {
 }
 const UserTabs: BottomTab[] = [
   {
-    name: 'Home',
-    label: 'Home',
-    icon: HomeIcon,
-    iconActive: HomeIconFilled,
+    name: 'Dashboard',
+    label: 'Dashboard',
+    icon: dashboardIcon,
+    iconActive: dashboardIconFill,
   },
   {
     name: 'Diary',
     label: 'Diary',
-    icon: HeartIcon,
-    iconActive: HeartIconFilled,
+    icon: diaryIcon,
+    iconActive: diaryIconFill,
   },
   {
     name: 'Trip',
     label: 'Trip',
-    icon: DuoIcon,
-    iconActive: DuoIconFilled,
+    icon: tripIcon,
+    iconActive: tripIconFill,
   },
   {
     name: 'Fleet',
     label: 'Fleet',
-    icon: helpIcon,
-    iconActive: helpIcon,
+    icon: truckIcon,
+    iconActive: truckIcon,
   },
   {
     name: 'Profile',
     label: 'Profile',
-    icon: ProfileIcon,
-    iconActive: ProfileIconFilled,
+    icon: profileIcon,
+    iconActive: profileIconFill,
   },
 ];
 

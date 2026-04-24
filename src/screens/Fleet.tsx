@@ -16,40 +16,46 @@ import Section from '../components/base/Section';
 const operationalFleet = [
   {
     id: '1',
-    truckId: 'TR-9942',
+    truckPlateNumber: 'TR-9942',
     status: 'In Transit',
-    driver: 'John Doe',
-    route: 'NY to LA',
+    truckType: 'Heavy Duty Semi',
+    totalMileage: '120,000 miles',
+    lastTrip: '2h Ago',
   },
   {
     id: '2',
-    truckId: 'TR-8810',
+    truckPlateNumber: 'TR-8810',
     status: 'Loading',
-    driver: 'Mike Smith',
-    route: 'TX to FL',
+    truckType: 'Heavy Duty Semi',
+    capacity: '10 tons',
+    totalMileage: '120,000 miles',
+    lastTrip: '2h Ago',
   },
 ];
 
 const listOfFleet = [
   {
     id: '3',
-    truckId: 'TR-1021',
+    truckPlateNumber: 'TR-1021',
     status: 'Available',
-    type: 'Flatbed',
-    capacity: '20 Tons',
+    truckType: 'Flatbed',
+    totalMileage: '120,000 miles',
+    capacity: '10 tons',
   },
   {
     id: '4',
-    truckId: 'TR-5532',
+    truckPlateNumber: 'TR-5532',
     status: 'Maintenance',
-    type: 'Reefer',
-    capacity: '15 Tons',
+    truckType: 'Reefer',
+    totalMileage: '150,000 miles',
+    capacity: '20 Tons',
   },
   {
     id: '5',
-    truckId: 'TR-7729',
+    truckPlateNumber: 'TR-7729',
     status: 'Available',
-    type: 'Box Truck',
+    truckType: 'Box Truck',
+    totalMileage: '80,000 miles',
     capacity: '10 Tons',
   },
 ];
@@ -110,8 +116,8 @@ const Clients = () => {
                 <Text style={styles.truckEmoji}>🚚</Text>
               </View>
               <View style={styles.fleetHeaderDetails}>
-                <Text style={styles.truckId}>{fleet.truckId}</Text>
-                <Text style={styles.driverName}>{fleet.driver}</Text>
+                <Text style={styles.truckId}>{fleet.truckPlateNumber}</Text>
+                <Text style={styles.driverName}>{fleet.truckType}</Text>
               </View>
               <View
                 style={[
@@ -133,10 +139,10 @@ const Clients = () => {
               </View>
               <View style={styles.routeLocations}>
                 <Text style={styles.routeText}>
-                  {fleet.route.split(' to ')[0]}
+                  Mileage: {fleet.totalMileage}
                 </Text>
                 <Text style={styles.routeText}>
-                  {fleet.route.split(' to ')[1]}
+                  Last Trip: {fleet.lastTrip}
                 </Text>
               </View>
             </View>
@@ -167,9 +173,9 @@ const Clients = () => {
                 <Text style={styles.listIconEmoji}>🚛</Text>
               </View>
               <View style={styles.listTextContainer}>
-                <Text style={styles.listTruckId}>{fleet.truckId}</Text>
+                <Text style={styles.listTruckId}>{fleet.truckPlateNumber}</Text>
                 <Text style={styles.listTruckSub}>
-                  {fleet.type} • {fleet.capacity}
+                  {fleet.truckType} • {fleet.capacity}
                 </Text>
               </View>
             </View>
